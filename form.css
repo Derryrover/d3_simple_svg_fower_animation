@@ -1,0 +1,31 @@
+#form_wrapper {
+    text-align: center;
+}
+#form_center {
+    display: inline-block;
+}
+input {
+    /*display: block;*/
+    font-family: Arial;
+    font-weight: bold;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+  color: white;
+  font-family: Arial;
+}
+
+.input_parameter {
+    margin-top: 7px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

@@ -55,7 +55,7 @@ setup = () => {
   .append('clipPath')
   .attr('id', circlesId)
 
-///*
+/*
   svg
   .append('animateTransform')
   .attr('attributeType', 'xml')
@@ -66,4 +66,22 @@ setup = () => {
   .attr("from", "0   0 0")
   .attr("to"  , "360 0 0")
 //*/
+
+///*
+svg
+  .append('animateTransform')
+  .attr('attributeType', 'xml')
+  .attr("attributeName", "transform")
+  .attr("type", "rotate")
+  .attr("repeatCount", "indefinite")
+  .attr("dur", '30s')
+  //.attr("from", "0   0 0")
+  //.attr("to"  , "360 0 0")
+  .attr("values", d =>
+    "360   0 0" + ';' +
+    "0 0 0" //+ ';' +
+    //"360   0 0" + ';'
+    )
+//*/
+
 }

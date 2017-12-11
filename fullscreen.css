@@ -11,3 +11,12 @@ html, body {
     overflow: hidden;
     background-color:black;
 }
+
+#wrapper {
+    text-align: center;
+}
+
+#svg {
+    display: inline-block;
+}
+

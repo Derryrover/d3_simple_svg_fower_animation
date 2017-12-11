@@ -1,5 +1,5 @@
 parameters =
 {
-degr   : 16,
+degrees: 16,
 rounds : 20,
 }

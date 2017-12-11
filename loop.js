@@ -1,6 +1,6 @@
 loop = () => {
 
-var data = generateData (parameters.rounds, parameters.degr || 1)
+var data = generateData (parameters.rounds, parameters.degrees || 1)
 
 
 
@@ -19,8 +19,9 @@ circle
 circle
 //.attr('transform', d => 'rotate(' + d.angle + ')')
 .attr('r'        , d => d.fragment * 1  + '%')
-.attr('cx'       , d => d.fragment * 50 + '%' )
+.attr('cx'       , d => d.fragment * 49 + '%' ) // 49 because when 50 radius of circle exceeds frame
 
+///*
 ///*
 circle
 .append('animateTransform')
@@ -28,14 +29,20 @@ circle
 .attr("attributeName", "transform")
 .attr("type", "rotate")
 .attr("repeatCount", "indefinite")
-.attr("dur", '10s')
+.attr("dur", '300s')
 //.attr("from", d => d.angle - d.fragment*100)
 //.attr("to"  , d => d.angle + d.fragment*100)
 .attr("values", d =>
-(d.angle - d.fragment*100) + ';' +
-(d.angle + d.fragment*100) + ';' +
-(d.angle - d.fragment*100)
+//(d.angle) + ';'
+//(d.angle - d.fragment*360) + ';' +
+(d.angle) + ';' +
+(d.angle + d.fragment*(360*23)) + ';' +
+(d.angle) + ';' //+
+//(d.angle - d.fragment*360) + ';' +
+//(d.angle + d.fragment*360) + ';' //+
+//(d.angle - d.fragment*720)
 )
+///*/
 /*
 circle
 .append('animateTransform')

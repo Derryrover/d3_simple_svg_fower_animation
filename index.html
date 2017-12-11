@@ -2,43 +2,42 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<script src="lib/d3.js"></script>
-<script src="lib/angular.js"></script>
-<script src="angular-control_panel.js"></script>
+<script src="d3.js"></script>
 <script src="parameters.js"></script>
 <script src="window_onload.js"></script>
 <script src="resize_window.js"></script>
 <script src="generate_data.js"></script>
 <script src="setup.js"></script>
 <script src="loop.js"></script>
+<script src="setup_events.js"></script>
 
 <link rel="stylesheet" href="fullscreen.css">
+<link rel="stylesheet" href="form.css">
 
 </head>
 
 <body>
-<div style="float: left" id="svg">
+
+<div id="wrapper">
+    <div id="svg">
+    </div>
 </div>
 
-<div
-style         = "float: left"
-ng-app        = "control_panel"
-ng-controller = "control_panel_controller"
->
-  <table>
-  <tr ng-repeat = "(key, value) in parameters" >
-    <td><label for = "{{'control_id_' + key}}"style="color:white">{{key}}</label></td>
-    <td>
-      <input
-      style    = "width:60px"
-      name     = "{{key}}"
-      id       = "{{'control_id_' + key}}"
-      type     = "number"
-      ng-model = "parameters[key]"
-      >
-    </td>
-  </tr>
-  </table>
+<div id="form_wrapper">
+<div id="form_center">
+<form>
+  <div class="input_parameter">
+  <label for="degrees">Degrees</label>
+   <input type="number" step="1" id="degrees" />
+   </div>
+  
+  <div class="input_parameter">
+  <label for="rounds">Rounds</label>
+   <input type="number" step="1" id="rounds" />
+   </div>
+  
+</form>
+</div>
 </div>
 
 </body>
